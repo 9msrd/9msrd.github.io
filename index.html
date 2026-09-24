@@ -112,7 +112,8 @@ header.over .brand .wm small{color:#9BA1AC}
 .hero-copy h1{font-size:clamp(2.1rem,4.6vw,3.9rem);line-height:1.12;margin:0 0 1.4rem;max-width:14ch}
 .hero-copy h1 .w{display:inline-block;opacity:0;transform:translateY(.5em);filter:blur(6px)}
 .hero-copy h1.go .w{animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*90ms)}
-.hero-copy h1 .w{background:inherit;-webkit-background-clip:text;background-clip:text}
+/* Give gradient-painted letters room for descenders without shifting the layout. */
+.hero-copy h1 .w{background:inherit;-webkit-background-clip:text;background-clip:text;padding-block:.2em;margin-block:-.2em}
 @keyframes rise{to{opacity:1;transform:none;filter:none}}
 .hero-copy .lede{color:#B9BEC7;font-size:1.15rem;max-width:42ch;margin:0 0 2rem}
 .hero-copy .btn{border-color:rgba(236,238,242,.35);color:#ECEEF2}
